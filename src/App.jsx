@@ -8,25 +8,25 @@ import Products from "./components/Products";
 import ProductDetail from "./components/ProductDetail";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header";
+import Ref from "./components/Ref";
 
 const App = () => {
-
-   const [token , setToken]  = useState(JSON.parse(localStorage.getItem("isloggedin")) || false) 
+  const [token, setToken] = useState(
+    JSON.parse(localStorage.getItem("isloggedin")) || false
+  );
   return (
     <BrowserRouter>
-    <Header/>
+      <Header />
       <Routes>
-
-        <Route path="/"  element={<Home/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/register" element={<Register/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/products" element={<Products/>} />
-        <Route element={<ProtectedRoute  isloggedin={token}/> }>
-        
-        <Route path="/product/:slug" element={<ProductDetail/>}  />          
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/products" element={<Products />} />
+        <Route element={<ProtectedRoute isloggedin={token} />}>
+          <Route path="/product/:slug" element={<ProductDetail />} />
         </Route>
-     
+        <Route path="refpractice" element={<Ref/>} />
       </Routes>
     </BrowserRouter>
   );
