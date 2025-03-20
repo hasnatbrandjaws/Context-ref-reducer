@@ -9,6 +9,7 @@ import ProductDetail from "./components/ProductDetail";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Header from "./components/Header";
 import Ref from "./components/Ref";
+import ComponentOne from "./components/ComponentOne";
 
 const App = () => {
   const [token, setToken] = useState(
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/product/:slug" element={<ProductDetail />} />
         </Route>
         <Route path="refpractice" element={<Ref/>} />
+        <Route path="/componentone" element={<ComponentOne/>} />
       </Routes>
     </BrowserRouter>
   );
