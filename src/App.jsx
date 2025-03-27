@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/product/:slug" element={<ProductDetail />} />
         </Route>
         <Route path="refpractice" element={<Ref/>} />
-        <Route path="/componentone" element={<ComponentOne/>} />
+        <Route path="/contextpractice" element={<ComponentOne/>} />
       </Routes>
     </BrowserRouter>
   );

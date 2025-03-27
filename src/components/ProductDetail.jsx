@@ -7,12 +7,20 @@ const ProductDetail = () => {
 
   const newObject = ProductsData.find((item, i) => item.slug == slug);
   return (
-    <div>
-      <ul>
-        <li>Name : {newObject.name}</li>
-        <li>Vendor : {newObject.vendor}</li>
-        <li>Price : {newObject.price}</li>
-        <li>Color : {newObject.color}</li>
+    <div className="bg-white p-6 rounded-2xl shadow-md w-80 mx-auto mt-10">
+      <ul className="space-y-3 text-gray-700">
+        <li className="text-lg font-semibold">
+          Name: <span className="font-normal">{newObject.name}</span>
+        </li>
+        <li className="text-lg font-semibold">
+          Vendor: <span className="font-normal">{newObject.vendor}</span>
+        </li>
+        <li className="text-lg font-semibold">
+          Price: <span className="font-normal">${newObject.price}</span>
+        </li>
+        <li className="text-lg font-semibold">
+          Color: <span className="font-normal">{newObject.color}</span>
+        </li>
       </ul>
     </div>
   );
